@@ -11,6 +11,30 @@ export async function submitAccessRequest(
   _prevState: RequestAccessState | null,
   formData: FormData
 ): Promise<RequestAccessState> {
+  const turnstileToken = formData.get("cf-turnstile-response") as string
+
+  if (!turnstileToken) {
+    return { success: false, error: "Please complete the CAPTCHA verification." }
+  }
+
+  const verifyRes = await fetch(
+    "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        secret: process.env.TURNSTILE_SECRET_KEY,
+        response: turnstileToken,
+      }),
+    }
+  )
+
+  const verifyData = await verifyRes.json()
+
+  if (!verifyData.success) {
+    return { success: false, error: "CAPTCHA verification failed. Please try again." }
+  }
+
   const name = formData.get("name") as string
   const email = formData.get("email") as string
   const message = formData.get("message") as string

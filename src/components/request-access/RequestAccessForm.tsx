@@ -2,6 +2,7 @@
 
 import { useActionState } from "react"
 import { Box, Button, Field, Input, Text, Textarea, VStack } from "@chakra-ui/react"
+import { Turnstile } from "@marsidev/react-turnstile"
 import { submitAccessRequest } from "@/app/request-access/actions"
 
 export function RequestAccessForm() {
@@ -112,6 +113,8 @@ export function RequestAccessForm() {
             }}
           />
         </Field.Root>
+
+        <Turnstile siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!} />
 
         <Button
           type="submit"
