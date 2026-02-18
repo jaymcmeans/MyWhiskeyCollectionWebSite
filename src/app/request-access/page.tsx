@@ -10,9 +10,8 @@ export const metadata: Metadata = {
 
 export default function RequestAccessPage() {
   return (
-    <main>
-      <Box py={20}>
-        <Container maxW="xl">
+    <Box py={20}>
+      <Container maxW="xl" mx="auto">
           <VStack gap={8}>
             <VStack gap={3} textAlign="center">
               <Heading
@@ -31,12 +30,19 @@ export default function RequestAccessPage() {
                 below and we&apos;ll review your request.
               </Text>
             </VStack>
-            <Box w="full">
+            <Box
+              w="full"
+              bg={{ base: "white", _dark: "whiskey.900" }}
+              border="1px solid"
+              borderColor={{ base: "amber.200", _dark: "whiskey.700" }}
+              rounded="xl"
+              p={{ base: 6, md: 8 }}
+              shadow="sm"
+            >
               <RequestAccessForm />
             </Box>
           </VStack>
         </Container>
       </Box>
-    </main>
   )
 }

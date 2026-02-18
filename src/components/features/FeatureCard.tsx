@@ -21,7 +21,7 @@ export function FeatureCard({ icon, title, description }: FeatureCardProps) {
       }}
       transition="all 0.2s"
     >
-      <VStack align="flex-start" gap={4}>
+      <VStack align="center" gap={4} textAlign="center">
         <Box
           as={icon}
           boxSize={8}

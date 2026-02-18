@@ -40,7 +40,7 @@ export function StepTimeline() {
       {/* Vertical line */}
       <Box
         position="absolute"
-        left="19px"
+        left="20px"
         top="20px"
         bottom="20px"
         w="2px"
@@ -49,11 +49,20 @@ export function StepTimeline() {
       />
       {STEPS.map((step, index) => (
         <Box key={step.title} py={5} position="relative">
-          <StepCard
-            number={index + 1}
-            title={step.title}
-            description={step.description}
-          />
+          <Box
+            bg={{ base: "white", _dark: "whiskey.800" }}
+            border="1px solid"
+            borderColor={{ base: "amber.200", _dark: "whiskey.700" }}
+            rounded="xl"
+            p={5}
+            ml={{ base: 0, md: 14 }}
+          >
+            <StepCard
+              number={index + 1}
+              title={step.title}
+              description={step.description}
+            />
+          </Box>
         </Box>
       ))}
     </VStack>

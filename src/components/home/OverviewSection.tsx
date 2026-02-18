@@ -26,8 +26,8 @@ const HIGHLIGHTS = [
 
 export function OverviewSection() {
   return (
-    <Box py={20}>
-      <Container maxW="6xl">
+    <Box py={20} bg={{ base: "white", _dark: "whiskey.900" }}>
+      <Container maxW="6xl" mx="auto">
         <VStack gap={12}>
           <VStack gap={3} textAlign="center">
             <Heading

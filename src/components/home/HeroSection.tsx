@@ -14,7 +14,7 @@ export function HeroSection() {
       gradientVia={{ base: "amber.50", _dark: "whiskey.950" }}
       gradientTo={{ base: "gold.50", _dark: "whiskey.950" }}
     >
-      <Container maxW="4xl" textAlign="center">
+      <Container maxW="4xl" mx="auto" textAlign="center">
         <VStack gap={6}>
           <Heading
             as="h1"

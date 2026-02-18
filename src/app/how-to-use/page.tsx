@@ -10,31 +10,29 @@ export const metadata: Metadata = {
 
 export default function HowToUsePage() {
   return (
-    <main>
-      <Box py={20}>
-        <Container maxW="3xl">
-          <VStack gap={12}>
-            <VStack gap={3} textAlign="center">
-              <Heading
-                as="h1"
-                fontFamily="var(--font-playfair), serif"
-                fontSize={{ base: "3xl", md: "4xl" }}
-                color={{ base: "whiskey.800", _dark: "amber.100" }}
-              >
-                How to Use
-              </Heading>
-              <Text
-                fontSize="lg"
-                color={{ base: "whiskey.600", _dark: "whiskey.300" }}
-                maxW="xl"
-              >
-                Get started with MyWhiskeyCollection in six simple steps.
-              </Text>
-            </VStack>
-            <StepTimeline />
+    <Box py={20} bg={{ base: "white", _dark: "whiskey.900" }}>
+      <Container maxW="3xl" mx="auto">
+        <VStack gap={12}>
+          <VStack gap={3} textAlign="center">
+            <Heading
+              as="h1"
+              fontFamily="var(--font-playfair), serif"
+              fontSize={{ base: "3xl", md: "4xl" }}
+              color={{ base: "whiskey.800", _dark: "amber.100" }}
+            >
+              How to Use
+            </Heading>
+            <Text
+              fontSize="lg"
+              color={{ base: "whiskey.600", _dark: "whiskey.300" }}
+              maxW="xl"
+            >
+              Get started with MyWhiskeyCollection in six simple steps.
+            </Text>
           </VStack>
-        </Container>
-      </Box>
-    </main>
+          <StepTimeline />
+        </VStack>
+      </Container>
+    </Box>
   )
 }

@@ -13,6 +13,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { HiMenu, HiX } from "react-icons/hi"
+import { ColorModeButton } from "@/components/ui/color-mode"
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -36,7 +37,7 @@ export function Header() {
       borderBottom="1px solid"
       borderColor={{ base: "amber.200", _dark: "whiskey.800" }}
     >
-      <Container maxW="7xl" py={3}>
+      <Container maxW="6xl" mx="auto" py={3}>
         <Flex justify="space-between" align="center">
           {/* Logo */}
           <Link href="/">
@@ -77,18 +78,21 @@ export function Header() {
                 </Link>
               )
             })}
+            <ColorModeButton />
           </HStack>
 
-          {/* Mobile hamburger */}
-          <IconButton
-            aria-label="Toggle menu"
-            display={{ base: "flex", md: "none" }}
-            variant="ghost"
-            size="sm"
-            onClick={() => setMobileOpen(!mobileOpen)}
-          >
-            {mobileOpen ? <HiX /> : <HiMenu />}
-          </IconButton>
+          {/* Mobile controls */}
+          <HStack gap={1} display={{ base: "flex", md: "none" }}>
+            <ColorModeButton />
+            <IconButton
+              aria-label="Toggle menu"
+              variant="ghost"
+              size="sm"
+              onClick={() => setMobileOpen(!mobileOpen)}
+            >
+              {mobileOpen ? <HiX /> : <HiMenu />}
+            </IconButton>
+          </HStack>
         </Flex>
 
         {/* Mobile menu */}

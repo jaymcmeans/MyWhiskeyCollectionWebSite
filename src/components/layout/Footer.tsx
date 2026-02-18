@@ -16,7 +16,7 @@ export function Footer() {
       color="whiskey.100"
       py={12}
     >
-      <Container maxW="7xl">
+      <Container maxW="6xl" mx="auto">
         <SimpleGrid columns={{ base: 1, md: 3 }} gap={8}>
           {/* Logo & tagline */}
           <VStack align={{ base: "center", md: "flex-start" }} gap={2}>

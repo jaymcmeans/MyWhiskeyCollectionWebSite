@@ -12,7 +12,7 @@ export function CTASection() {
       borderBottom="1px solid"
       borderColor={{ base: "amber.200", _dark: "whiskey.700" }}
     >
-      <Container maxW="3xl" textAlign="center">
+      <Container maxW="3xl" mx="auto" textAlign="center">
         <VStack gap={6}>
           <Heading
             as="h2"

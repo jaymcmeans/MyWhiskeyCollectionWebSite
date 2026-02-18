@@ -4,10 +4,10 @@ import { CTASection } from "@/components/home/CTASection"
 
 export default function HomePage() {
   return (
-    <main>
+    <>
       <HeroSection />
       <OverviewSection />
       <CTASection />
-    </main>
+    </>
   )
 }
