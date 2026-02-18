@@ -27,7 +27,7 @@ export default function HowToUsePage() {
               color={{ base: "whiskey.600", _dark: "whiskey.300" }}
               maxW="xl"
             >
-              Get started with MyWhiskeyCollection in six simple steps.
+              Get started with MyWhiskeyCollection in seven simple steps.
             </Text>
           </VStack>
           <StepTimeline />

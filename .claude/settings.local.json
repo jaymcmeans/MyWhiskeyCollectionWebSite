@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "WebSearch",
+      "WebFetch(domain:chakra-ui.com)",
+      "Bash(npm install:*)",
+      "Bash(npx @chakra-ui/cli snippet add:*)",
+      "Bash(npm run build:*)",
+      "mcp__claude_ai_Supabase__get_project_url",
+      "mcp__claude_ai_Supabase__get_publishable_keys",
+      "mcp__claude_ai_Supabase__apply_migration",
+      "mcp__claude_ai_Supabase__deploy_edge_function",
+      "mcp__claude_ai_Supabase__get_advisors",
+      "Bash(npx supabase --version)",
+      "Bash(ls:*)"
+    ]
+  }
+}

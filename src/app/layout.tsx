@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${playfair.variable}`}>
+      <body className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
         <Provider>
           <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
             <Header />

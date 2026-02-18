@@ -3,38 +3,51 @@
 import { SimpleGrid } from "@chakra-ui/react"
 import {
   HiChartBar,
-  HiCollection,
-  HiOfficeBuilding,
   HiUpload,
   HiShieldCheck,
   HiDeviceMobile,
 } from "react-icons/hi"
+import { BottleIcon } from "@/components/icons/BottleIcon"
+import { DistilleryIcon } from "@/components/icons/DistilleryIcon"
 import { FeatureCard } from "./FeatureCard"
+import type { IconType } from "react-icons"
+import type { ComponentType } from "react"
 
-const FEATURES = [
+interface Feature {
+  icon: IconType | ComponentType<{ size?: number | string; color?: string }>
+  title: string
+  description: string
+  slug?: string
+}
+
+const FEATURES: Feature[] = [
   {
     icon: HiChartBar,
     title: "Dashboard & Analytics",
     description:
       "View your collection at a glance with stats cards showing total bottles, unique distilleries, and more. Interactive charts break down your collection by type, status, and country of origin.",
+    slug: "dashboard",
   },
   {
-    icon: HiCollection,
+    icon: BottleIcon,
     title: "Bottle Management",
     description:
-      "Full CRUD operations for your bottles. Search by name, filter by type or status, sort by any column, and navigate with pagination. Every detail from ABV to tasting notes.",
+      "Add, edit, view, and delete your bottles through a clean interface. Search by name, filter by type or status, sort by any column, and navigate with pagination. Every detail from ABV to tasting notes.",
+    slug: "bottles",
   },
   {
-    icon: HiOfficeBuilding,
+    icon: DistilleryIcon,
     title: "Distillery Directory",
     description:
       "Maintain a directory of distilleries linked to your bottles. Add details like region, country, and founding year. See which bottles come from each distillery.",
+    slug: "distilleries",
   },
   {
     icon: HiUpload,
     title: "CSV Import",
     description:
       "Import bottles and distilleries in bulk via CSV files. Download pre-built templates, validate your data before import, and get detailed error reports if anything needs fixing.",
+    slug: "csv-import",
   },
   {
     icon: HiShieldCheck,

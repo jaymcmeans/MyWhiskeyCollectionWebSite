@@ -8,6 +8,11 @@ const STEPS = [
       "Submit a request through our access form. An admin will review your request and create your account. You'll receive your credentials to get started.",
   },
   {
+    title: "Import Your Collection (Optional)",
+    description:
+      "Already have a spreadsheet of your collection? Use the CSV import to bring in your bottles and distilleries in bulk. Download the pre-built templates, match your data to the expected format, and upload. You can skip this step and add everything manually instead.",
+  },
+  {
     title: "Add Distilleries",
     description:
       "Start by adding the distilleries behind your bottles. Enter details like name, region, country, and founding year — or import them in bulk via CSV.",
